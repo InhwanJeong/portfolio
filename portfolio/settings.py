@@ -14,6 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+FRONTEND_DIR = BASE_DIR / "service"
 
 
 # Quick-start development settings - unsuitable for production
@@ -54,7 +55,9 @@ ROOT_URLCONF = "portfolio.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            FRONTEND_DIR / "build",
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -128,3 +131,6 @@ MEDIA_ROOT = '/home/inhwanJeong/portfolio/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/inhwanJeong/portfolio/static'
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    FRONTEND_DIR / "build/static",
+]

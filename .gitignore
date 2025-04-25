@@ -172,3 +172,20 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# react
+# dependencies
+/service/node_modules/
+
+# production
+/service/build/
+/service/dist/
+
+# misc
+/service/.DS_Store
+/service/.env
+/service/.env.*.local
+/service/.env.local
+/service/.env.development.local
+/service/.env.test.local
+/service/.
